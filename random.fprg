@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-08 11:45:49 &#214;S"/>
+        <attribute name="created" value="bGVub3ZvO0xBUFRPUC1DNUFKSEVORTsyMDE5LTEwLTA4OzA4OjE2OjMwIMOWUzszMTM4"/>
+        <attribute name="edited" value="bGVub3ZvO0xBUFRPUC1DNUFKSEVORTsyMDE5LTEwLTA4OzExOjQ1OjQ5IMOWUzsxOzMyNTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="tahmin" type="Integer" array="False" size=""/>
+            <declare name="rasgele" type="Integer" array="False" size=""/>
+            <declare name="sayac" type="Integer" array="False" size=""/>
+            <assign variable="sayac" expression="0"/>
+            <assign variable="tahmin" expression="0"/>
+            <assign variable="rasgele" expression="0"/>
+            <assign variable="rasgele" expression="Random(100)"/>
+            <do expression="rasgele!=tahmin">
+                <assign variable="sayac" expression="sayac+1"/>
+                <output expression="&quot;tahmini girin: &quot;" newline="True"/>
+                <input variable="tahmin"/>
+                <if expression="tahmin&lt;rasgele">
+                    <then>
+                        <output expression="tahmin&amp;&quot;'den/dan daha buyuk sayi sallayin :)&quot;" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="rasgele&lt;tahmin">
+                            <then>
+                                <output expression="tahmin&amp;&quot;'den/dan daha kucuk sayi sallay&#305;n :)&quot;" newline="True"/>
+                            </then>
+                            <else/>
+                        </if>
+                    </else>
+                </if>
+            </do>
+            <output expression="tahmin&amp; &quot; tahmininiz ba&#351;ar&#305;l&#305; m&#252;neccim gibisin ma&#351;allah :) tebrik ederiz &quot; &amp;sayac&amp; &quot;. denemende basar&#305;l&#305; oldun kendine iyi bak :) &quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

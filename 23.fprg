@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-26 03:24:56 &#214;S"/>
+        <attribute name="created" value="bGVub3ZvO0xBUFRPUC1DNUFKSEVORTsyMDE5LTEwLTAyOzExOjQ0OjQzIMOWUzszMTMx"/>
+        <attribute name="edited" value="bGVub3ZvO0xBUFRPUC1DNUFKSEVORTsyMDE5LTEwLTI2OzAzOjI0OjU2IMOWUzszOzMyNTA="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="sayi1, &#233;, toplam, fark, carpim, sayi2" type="Integer" array="False" size=""/>
+            <declare name="bolum" type="Real" array="False" size=""/>
+            <assign variable="toplam" expression="0"/>
+            <assign variable="bolum" expression="0"/>
+            <assign variable="fark" expression="0"/>
+            <assign variable="carpim" expression="0"/>
+            <output expression="&quot;IKI SAYI ILE ISLEM YAPMA UYGULAMASI&quot;" newline="True"/>
+            <output expression="&quot;1.say&#305;y&#305; giriniz:&quot;" newline="True"/>
+            <input variable="sayi1"/>
+            <output expression="&quot;2.say&#305;y&#305; giriniz:&quot;" newline="True"/>
+            <input variable="sayi2"/>
+            <output expression="&quot;yapmak istedi&#287;iniz i&#351;lem i&#231;in se&#231;eneklerden yararlanabilirsiniz.&quot;" newline="True"/>
+            <output expression="&quot;&#233;=1 ise toplam,&#233;=2 ise fark,&#233;=3 ise bolum,&#233;=4 ise carpim&quot;" newline="True"/>
+            <output expression="&quot;&#233; say&#305;s&#305; i&#231;in de&#287;er girin&quot;" newline="True"/>
+            <input variable="&#233;"/>
+            <if expression="&#233;=1">
+                <then>
+                    <assign variable="toplam" expression="sayi1+sayi2"/>
+                    <output expression="toplam" newline="True"/>
+                </then>
+                <else>
+                    <if expression="&#233;=2">
+                        <then>
+                            <assign variable="fark" expression="sayi1-sayi2"/>
+                            <output expression="fark" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="&#233;=3">
+                                <then>
+                                    <assign variable="bolum" expression="sayi1/sayi2"/>
+                                    <output expression="bolum" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="&#233;=4">
+                                        <then>
+                                            <assign variable="carpim" expression="sayi1*sayi2"/>
+                                            <output expression="carpim" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;hatal&#305; giri&#351;&quot;" newline="True"/>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

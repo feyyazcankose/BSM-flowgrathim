@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="lenovo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2019-10-09 01:05:57 &#214;&#214;"/>
+        <attribute name="created" value="bGVub3ZvO0xBUFRPUC1DNUFKSEVORTsyMDE5LTEwLTA5OzEyOjM1OjA3IMOWw5Y7MzI3MA=="/>
+        <attribute name="edited" value="bGVub3ZvO0xBUFRPUC1DNUFKSEVORTsyMDE5LTEwLTA5OzAxOjA1OjU3IMOWw5Y7MTszMzc4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Sayi karsilastirma programina hos geldiniz :)&quot;" newline="True"/>
+            <declare name="ek" type="Integer" array="False" size=""/>
+            <declare name="eb" type="Integer" array="False" size=""/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <declare name="sayi" type="Integer" array="False" size=""/>
+            <declare name="sayac" type="Integer" array="False" size=""/>
+            <assign variable="sayac" expression="0"/>
+            <assign variable="sayi" expression="0"/>
+            <output expression="&quot;kac tane sayi gireceginizi girin: &quot;" newline="True"/>
+            <input variable="n"/>
+            <while expression="sayac!=n">
+                <output expression="&quot;Sayi girin :&quot;" newline="True"/>
+                <input variable="sayi"/>
+                <assign variable="sayac" expression="sayac+1"/>
+                <if expression="sayac==1">
+                    <then>
+                        <assign variable="eb" expression="sayi"/>
+                        <assign variable="ek" expression="sayi"/>
+                        <output expression="&quot;En kucuk deger: &quot;&amp;sayi" newline="True"/>
+                        <output expression="&quot;En buyuk deger : &quot;&amp;sayi" newline="True"/>
+                    </then>
+                    <else>
+                        <if expression="eb&lt;=sayi">
+                            <then>
+                                <assign variable="eb" expression="sayi"/>
+                                <output expression="&quot;En buyuk deger : &quot;&amp;sayi" newline="True"/>
+                                <output expression="&quot;En kucuk sayi: &quot;&amp;ek" newline="True"/>
+                            </then>
+                            <else>
+                                <assign variable="eb" expression="eb"/>
+                                <output expression="&quot;En buyuk deger : &quot;&amp;eb" newline="True"/>
+                                <output expression="&quot;En kucuk sayi: &quot;&amp;sayi" newline="True"/>
+                                <assign variable="ek" expression="sayi"/>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+            <output expression="&quot;EN BUYUK SAY&#304; :&quot;&amp;eb" newline="True"/>
+            <output expression="&quot;EN KUCUK SAY&#304; :&quot;&amp;ek" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
